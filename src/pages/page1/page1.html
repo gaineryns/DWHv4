@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>Product List</ion-title>
     <ion-buttons end>
       <button ion-button (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
@@ -13,11 +13,29 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+
+  <ion-list *ngFor="let product of products" class="table-content">
+    <ion-card>
+        <button ion-item clear item-right (click)="openModal({prod: product})" >
+          <ion-row>
+            <ion-col center text-center>
+              <ion-thumbnail >
+              <img src="http://www.planwallpaper.com/static/images/animals-4.jpg">
+              </ion-thumbnail>
+            </ion-col>
+            <ion-col text-center style="align-self: center">
+             <i> {{product.reference}}</i>  <br>
+              <p>{{product.nom}}  </p> <br>
+            </ion-col>
+            <ion-col text-center class="quantity" text-center style="align-self: center">
+              {{product.quantity}}
+            </ion-col>
+          </ion-row>
+        </button>
+    </ion-card>
+  </ion-list>
+
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

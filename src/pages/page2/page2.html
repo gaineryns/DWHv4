@@ -3,21 +3,42 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page Two</ion-title>
+    <ion-title>Product List</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
   </div>
+  <ion-list *ngFor="let product of products" class="table-content">
+    <ion-card>
+      <button ion-item clear item-right (click)="openModal({prod: product})" >
+        <ion-row>
+          <ion-col center text-center>
+            <ion-thumbnail >
+              <img src="http://www.planwallpaper.com/static/images/animals-4.jpg">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col text-center style="align-self: center">
+            <i> {{product._id}}</i>  <br>
+            <p>{{product.nom}}  </p> <br>
+          </ion-col>
+          <ion-col text-center class="quantity" text-center style="align-self: center">
+            {{product.quantity}}
+          </ion-col>
+        </ion-row>
+      </button>
+
+    </ion-card>
+  </ion-list>
+
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

@@ -1,6 +1,7 @@
 page-login {
   .login-content {
-    background: #56CA96;
+    background: url("http://www.planwallpaper.com/static/images/abstract-wallpapers-1080p-hd.jpg") center no-repeat;
+    background-size: cover;
 
     .logo-row {
       padding-top: 50px;
@@ -8,9 +9,10 @@ page-login {
     }
 
     .login-box {
-      background: #399F8B;
+
       padding: 20px 20px 0px 20px;
       margin-top: 30px;
+
     }
 
     ion-row {
