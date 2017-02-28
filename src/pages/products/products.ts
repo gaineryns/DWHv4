@@ -5,9 +5,9 @@ import { Data } from '../../providers/data';
 
 @Component({
   selector: 'page-page2',
-  templateUrl: 'page2.html'
+  templateUrl: 'products.html'
 })
-export class Page2 {
+export class ProductsPage {
 
   searchTerm: string = '';
   searchControl: FormControl;
