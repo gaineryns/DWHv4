@@ -275,7 +275,7 @@ export class Page1 {
   public logout() {
     this.auth.logout().subscribe(succ => {
       this.navCtrl.setRoot(LoginPage);
-    })
+    });
   }
 }
   @Component({
