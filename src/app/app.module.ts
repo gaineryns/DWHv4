@@ -9,6 +9,8 @@ import { AuthService} from '../providers/auth-service';
 import { ModalContent } from '../pages/page1/page1';
 import { Data } from '../providers/data';
 
+import { ProductService } from '../providers/product-service'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,6 +32,6 @@ import { Data } from '../providers/data';
     RegisterPage,
     ModalContent
   ],
-  providers: [AuthService, Data]
+  providers: [AuthService, Data,ProductService ]
 })
 export class AppModule {}

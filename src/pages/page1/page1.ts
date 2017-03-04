@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../providers/auth-service';
 import { MenuController, NavController, ModalController, NavParams, ViewController } from 'ionic-angular';
 import {LoginPage} from "../login/login";
+import {ProductService} from "../../providers/product-service";
+export {ProductService} from "../../providers/product-service";
 
 @Component({
   selector: 'page-page1',
@@ -10,13 +12,20 @@ import {LoginPage} from "../login/login";
 export class Page1 {
   username = "";
   email = "";
-
-  constructor(public navCtrl: NavController, private auth: AuthService, public menu: MenuController, public modalCtrl: ModalController) {
+public produ:any;
+  constructor(public productService:ProductService,  public navCtrl: NavController, private auth: AuthService, public menu: MenuController, public modalCtrl: ModalController) {
     let info = this.auth.getUserInfo();
     this.username = info.name;
     this.email = info.email;
+    this.loadProduct();
   }
 
+  loadProduct(){
+    this.productService.load()
+        .then(data => {
+          this.produ = data;
+        })
+  }
   products = [
     {
       "_id": "587b37f2e97dbff07e3a85d8",

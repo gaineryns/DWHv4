@@ -15,24 +15,22 @@
 <ion-content padding>
 
 
-  <ion-list *ngFor="let product of products" class="table-content">
+  <ion-list *ngFor="let people of produ" class="table-content">
     <ion-card>
-        <button ion-item clear item-right (click)="openModal({prod: product})" >
-          <ion-row>
+         <ion-row>
             <ion-col center text-center>
               <ion-thumbnail >
-              <img src="http://www.planwallpaper.com/static/images/animals-4.jpg">
+              <img src="{{ people.picture.thumbnail}}">
               </ion-thumbnail>
             </ion-col>
             <ion-col text-center style="align-self: center">
-             <i> {{product.reference}}</i>  <br>
-              <p>{{product.nom}}  </p> <br>
+             <i> {{people.name.first}} </i>  <br>
+              <p>{{people.name.last}} </p> <br>
             </ion-col>
             <ion-col text-center class="quantity" text-center style="align-self: center">
-              {{product.quantity}}
+              {{people.email}}
             </ion-col>
           </ion-row>
-        </button>
     </ion-card>
   </ion-list>
 
