@@ -283,6 +283,7 @@ public produ:any;
 
   public logout() {
     this.auth.logout().subscribe(succ => {
+      this.menu.enable(false);
       this.navCtrl.setRoot(LoginPage);
     });
   }

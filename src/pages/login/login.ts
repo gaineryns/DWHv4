@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController, LoadingController, Loading } from 'ionic-angular';
+import {NavController, NavParams, AlertController, LoadingController, Loading, MenuController} from 'ionic-angular';
 import { RegisterPage } from "../register/register";
 import {AuthService} from "../../providers/auth-service";
 import { ProductsPage } from "../products/products"
@@ -11,7 +11,7 @@ export class LoginPage {
   loading: Loading;
   registerCredentials = {email: '', password: ''};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public menu:MenuController) {
 
   }
   public createAccount(){
@@ -23,6 +23,7 @@ export class LoginPage {
       if(allowed){
         setTimeout(() => {
           this.loading.dismiss();
+          this.menu.enable(true);
           this.navCtrl.setRoot(ProductsPage);
         });
       } else{
