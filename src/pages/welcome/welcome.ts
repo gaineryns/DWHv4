@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, MenuController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
-
 /*
   Generated class for the Welcome page.
 
@@ -22,20 +21,16 @@ export class WelcomePage {
   }
   slides = [
     {
-      title: "Bienvenue !!",
-      description:  "",
-      image: "assets/images/SWR.png",
+      title: "",
+      description:  "Bienvenue sur SWH! App.",
+      image: "assets/images/SWR.jpg",
     },
     {
       title: "Qu'est ce que DWH! ?",
-      description: "<b>DWH! App</b> est l'application mobile qui vous permettra de non seulement de reduite le temps de préparation d'une commande mais aussi de l'effectuer un inventaire rapide et facile de votre entrepôt.",
-      image: "assets/img/ica-slidebox-img-2.png",
-    },
-    {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "assets/img/ica-slidebox-img-3.png",
+      description: "<b>DWH! App</b> Vous accompagne dans la gestion de votre entrepôt.",
+      image: "assets/images/logo2.jpg",
     }
+
   ];
 
   startApp(){

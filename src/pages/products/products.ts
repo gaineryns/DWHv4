@@ -41,7 +41,7 @@ export class ProductsPage {
   }
 
   openModal(product) {
-    let modal = this.modalCtrl.create(ModalContent, product);
+    let modal = this.modalCtrl.create(ModalContent1, product);
     modal.present();
   }
 
@@ -81,7 +81,7 @@ export class ProductsPage {
 `
 })
 
-export class ModalContent{
+export class ModalContent1{
   product;
   constructor(public params: NavParams,public viewCtrl: ViewController) {
     this.product = this.params.get('prod');

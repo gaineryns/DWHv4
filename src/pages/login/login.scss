@@ -1,6 +1,6 @@
 page-login {
   .login-content {
-    background: url("http://www.planwallpaper.com/static/images/abstract-wallpapers-1080p-hd.jpg") center no-repeat;
+    background-color: white;
     background-size: cover;
 
     .logo-row {
@@ -11,7 +11,7 @@ page-login {
     .login-box {
 
       padding: 20px 20px 0px 20px;
-      margin-top: 30px;
+      margin-left:20px;
 
     }
 
@@ -23,7 +23,7 @@ page-login {
     ion-item {
       border-radius: 30px !important;
       padding-left: 30px !important;
-      font-size: 0.9em;
+      font-size: 1.5em;
       margin-bottom: 10px;
       border: 1px solid #ffffff;
       border-bottom: 0px !important;
@@ -31,8 +31,8 @@ page-login {
     }
 
     .signup-col {
-      margin: 0px 16px 0px 16px;
       padding-bottom: 20px;
+      margin-left: 40px;
 
     }
 
@@ -42,8 +42,8 @@ page-login {
     }
 
     .submit-btn {
-      width: 20%;
-      background: #51CFB1;
+      width: 30%;
+      background: darkred;
       border-radius: 30px !important;
       border: 1px solid #ffffff;
     }

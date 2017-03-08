@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Page1} from '../pages/page1/page1';
-import { ProductsPage } from '../pages/products/products';
+import {ProductsPage, ModalContent1} from '../pages/products/products';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -12,6 +12,7 @@ import { Data } from '../providers/data';
 
 import { ProductService } from '../providers/product-service'
 import {RangePage} from "../pages/range/range";
+import {PickingPage} from "../pages/picking/picking";
 
 @NgModule({
   declarations: [
@@ -21,8 +22,10 @@ import {RangePage} from "../pages/range/range";
     LoginPage,
     RegisterPage,
     ModalContent,
+    ModalContent1,
     WelcomePage,
-    RangePage
+    RangePage,
+    PickingPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,8 +38,10 @@ import {RangePage} from "../pages/range/range";
     LoginPage,
     RegisterPage,
     ModalContent,
+    ModalContent1,
     WelcomePage,
-    RangePage
+    RangePage,
+    PickingPage
   ],
   providers: [AuthService, Data,ProductService ]
 })
