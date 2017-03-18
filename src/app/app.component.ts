@@ -23,10 +23,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'Dashboard', component:""},
       { title: 'All Produits', component: ProductsPage },
-      { title: 'Autre', component: Page1 },
+      { title: 'Inventaire', component: Page1 },
       { title: 'Product In', component: RangePage },
-      { title: 'Product Out', component: PickingPage }
+      { title: 'Product Out', component: PickingPage },
     ];
 
   }

@@ -24,16 +24,15 @@
               </ion-thumbnail>
             </ion-col>
             <ion-col text-center style="align-self: center">
-             <i> {{people.name.first}} </i>  <br>
-              <p>{{people.name.last}} </p> <br>
+             <i> {{people.name.first}} {{people.name.last}}</i>  <br>
+              <p> {{people.email}}</p> <br>
             </ion-col>
             <ion-col text-center class="quantity" text-center style="align-self: center">
-              {{people.email}}
+                {{people.reference}}
             </ion-col>
           </ion-row>
     </ion-card>
   </ion-list>
 
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, AlertController, LoadingController, Loading, MenuController} from 'ionic-angular';
+import {NavController, NavParams, AlertController, LoadingController, Loading, MenuController, ToastController} from 'ionic-angular';
 import { RegisterPage } from "../register/register";
 import {AuthService} from "../../providers/auth-service";
 import { ProductsPage } from "../products/products"
@@ -17,6 +17,8 @@ export class LoginPage {
   public createAccount(){
     this.navCtrl.push(RegisterPage);
   }
+
+
   public login(){
     this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {

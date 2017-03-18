@@ -1,21 +1,24 @@
 page-range {
 
+  h2{
+    color: red;
+    font-size:20px;
+    margin-bottom: 20%;
+
+  }
   .full {
     height: 100%;
   }
 
-  .rack {
-    background: url("") no-repeat;
-    background-size: cover;
-    border: solid 4px grey;
-
+  .box{
+    margin:auto;
+  }
+  .rack{
+    background: url("../../assets/images/rack.jpeg") no-repeat center;
 
   }
+  .product{
 
-  .product {
-
-    background: url("") no-repeat ;
-    background-size: cover;
-    border: solid 4px grey;
+    background: url("../../assets/images/box.jpeg") no-repeat center;
   }
 }

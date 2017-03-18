@@ -5,24 +5,43 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>range</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Product In</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
+
 
 
 <ion-content padding>
   <ion-row class="full">
     <ion-col class="rack">
-      <button>Scan </button>
-
-      <button> Annuler</button>
-
+      <h2> Emplacement</h2>
+      <div class="box">
+        <button class="scan" (click)="cekNFC()" ion-button>Scan</button>
+      </div>
+      <div class="box">
+      <button class="cancel" ion-button color="danger" > Annuler</button>
+      </div>
     </ion-col>
     <ion-col  class="product">
 
+
+      <h2> produit</h2>
+
+      <div class="box">
+        <button class="scan" ion-button >Scan</button>
+      </div>
+      <div class="box">
+        <button class="cancel" ion-button color="danger"> Annuler</button>
+      </div>
     </ion-col>
   </ion-row>
 </ion-content>
