@@ -13,6 +13,7 @@ import { Data } from '../providers/data';
 import { ProductService } from '../providers/product-service'
 import {RangePage} from "../pages/range/range";
 import {PickingPage} from "../pages/picking/picking";
+import {TestnfcPage} from "../pages/testnfc/testnfc";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {PickingPage} from "../pages/picking/picking";
     ModalContent1,
     WelcomePage,
     RangePage,
-    PickingPage
+    PickingPage,
+    TestnfcPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,7 +43,8 @@ import {PickingPage} from "../pages/picking/picking";
     ModalContent1,
     WelcomePage,
     RangePage,
-    PickingPage
+    PickingPage,
+    TestnfcPage
   ],
   providers: [AuthService, Data,ProductService ]
 })

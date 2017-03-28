@@ -20,7 +20,8 @@ data ="";
       return Promise.resolve(this.data);
     }
     return new Promise(resolve => {
-      this.http.get('https://randomuser.me/api/?results=10')
+      //this.http.get('https://randomuser.me/api/?results=10')
+        this.http.get('https://randomuser.me/api/?results=10')
           .map(res => res.json())
           .subscribe(data => {
             this.data = data.results;

@@ -7,6 +7,7 @@ import { ProductsPage } from '../pages/products/products';
 import { WelcomePage } from '../pages/welcome/welcome';
 import {RangePage} from "../pages/range/range";
 import {PickingPage} from "../pages/picking/picking";
+import {TestnfcPage} from "../pages/testnfc/testnfc";
 
 @Component({
   templateUrl: 'app.html'
@@ -28,6 +29,7 @@ export class MyApp {
       { title: 'Inventaire', component: Page1 },
       { title: 'Product In', component: RangePage },
       { title: 'Product Out', component: PickingPage },
+      { title: 'Test Nfc', component: TestnfcPage },
     ];
 
   }

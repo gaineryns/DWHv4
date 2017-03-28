@@ -19,12 +19,10 @@
     <ion-card>
          <ion-row>
             <ion-col center text-center>
-              <ion-thumbnail >
-              <img src="{{ people.picture.thumbnail}}">
-              </ion-thumbnail>
+
             </ion-col>
             <ion-col text-center style="align-self: center">
-             <i> {{people.name.first}} {{people.name.last}}</i>  <br>
+             <i> {{people.id.value}} {{people.name.last}}</i>  <br>
               <p> {{people.email}}</p> <br>
             </ion-col>
             <ion-col text-center class="quantity" text-center style="align-self: center">
@@ -33,6 +31,5 @@
           </ion-row>
     </ion-card>
   </ion-list>
-
 
 </ion-content>
