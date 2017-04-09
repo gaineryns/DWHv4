@@ -19,6 +19,17 @@
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
   </platform>
+
+  <platform name="android">
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+    <intent-filter>
+      <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+      <data android:mimeType="text/pg"/>
+      <category android:name="android.intent.category.DEFAULT"/>
+    </intent-filter>
+  </platform>
+
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>

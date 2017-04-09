@@ -21,12 +21,13 @@ data ="";
     }
     return new Promise(resolve => {
       //this.http.get('https://randomuser.me/api/?results=10')
-        this.http.get('https://randomuser.me/api/?results=10')
+        this.http.get('http://176.31.120.34:8088/products')
           .map(res => res.json())
           .subscribe(data => {
             this.data = data.results;
             resolve(this.data);
           });
+        console.log(this.data);
     });
   }
 

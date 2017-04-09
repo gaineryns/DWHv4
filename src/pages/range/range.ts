@@ -53,7 +53,6 @@ export class RangePage {
   sesReadNFC(data):void {
     this.tag = JSON.parse(JSON.stringify(data, null, 4));
     console.log(JSON.stringify(data, null, 4));
-    NFC.stopHandover();
   }
   presentToast(){
     let toast = this.toastCtrl.create({
